@@ -1,0 +1,30 @@
+{
+    "files.associations": {
+        "lorawan.h": "c",
+        "config.h": "c",
+        "loramac.h": "c",
+        "tusb.h": "c",
+        "sx1276-board.h": "c",
+        "regioncommon.h": "c",
+        "board.h": "c",
+        "firmwareversion.h": "c",
+        "commissioning.h": "c",
+        "lmhandler.h": "c",
+        "lmhandlermsgdisplay.h": "c",
+        "radio.h": "c",
+        "sx126x-board.h": "c",
+        "sx126x.h": "c",
+        "sx1276.h": "c",
+        "lmhpcompliance.h": "c",
+        "lmhandlertypes.h": "c",
+        "board-config.h": "c",
+        "gpio.h": "c",
+        "delay.h": "c",
+        "utilities.h": "c",
+        "memory": "c",
+        "random": "c",
+        "optional": "c",
+        "gpio-board.h": "c"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}
