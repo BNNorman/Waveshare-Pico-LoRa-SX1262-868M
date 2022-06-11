@@ -1,3 +1,16 @@
+# NOTE:
+
+As of today,June 11th 2022, Demo Code from https://www.waveshare.com/wiki/Pico-LoRa-SX1262-868M for this HAT did not work for me. 
+
+I spent 6 weeks sending emails back and forth and all they could do was tell me my keys didn't work (even though I told them they worked on a Pico-RFM95W setup).
+
+Anyway, the problem was traced to the file src/lorawan.c and some code, using sscanf("%shhx"), which corrupted the keys. I replaced calls to that with a simple method to convert the ascii hex keys to a byte array and the board now talks to TTN
+
+NOTE: Sandeep Mistry has updated his code in src/board/rp2040/spi-board.c - that change is included here.
+
+
+What follows is Waveshare's original readme.
+
 # pico-lorawan
 Enable LoRaWAN communications on your [Raspberry Pi Pico](https://www.raspberrypi.org/products/raspberry-pi-pico/) or any RP2040 based board using a [Semtech SX1276 radio module](https://www.semtech.com/apps/product.php?pn=SX1276).
 
