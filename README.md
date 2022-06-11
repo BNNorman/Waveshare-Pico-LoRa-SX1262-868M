@@ -4,7 +4,7 @@ As of today,June 11th 2022, Demo Code from https://www.waveshare.com/wiki/Pico-L
 
 I spent 6 weeks sending emails back and forth and all they could do was tell me my keys didn't work (even though I told them they worked on a Pico-RFM95W setup).
 
-Anyway, the problem was traced to the file src/lorawan.c and some code, using sscanf("%shhx"), which corrupted the keys. I replaced calls to that with a simple method to convert the ascii hex keys to a byte array and the board now talks to TTN
+Anyway, the problem was traced to the file src/lorawan.c and some code, using sscanf("%2hhx"), which corrupted the keys. I replaced calls to that with a simple method to convert the ascii hex keys to a byte array and the board now talks to TTN
 
 NOTE: Sandeep Mistry has updated his code in src/board/rp2040/spi-board.c - that change is included here.
 
